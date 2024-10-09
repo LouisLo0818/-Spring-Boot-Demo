@@ -51,8 +51,6 @@ public class crime_dataService {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream()));
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader())) {
 
-            Set<String> seenColumns = new HashSet<>();
-
             for (CSVRecord csvRecord : csvParser) {
                 crime crime = new crime();
 
